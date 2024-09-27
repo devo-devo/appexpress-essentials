@@ -34,13 +34,13 @@ export default {
         excludes = [],
         preFlightContinue = false,
         optionsSuccessStatus = 204,
-        methods = ['get', 'head', 'put', 'patch', 'post', 'delete'],
+        methods = ['get', 'head', 'put', 'PATCH', 'post', 'delete'],
     }) => {
         configOptions.origin = origin;
         configOptions.excludedPaths = excludes;
         configOptions.preflightContinue = preFlightContinue;
         configOptions.optionsSuccessStatus = optionsSuccessStatus;
-        configOptions.methods = methods.map((method) => method.toLowerCase());
+        // configOptions.methods = methods.map((method) => method.toLowerCase());
     },
 
     /**
